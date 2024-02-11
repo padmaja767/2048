@@ -1,6 +1,9 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+    background-image: url('./background.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
 }
 
 hr {
@@ -12,7 +15,7 @@ hr {
     height: 400px;
 
     background-color: #cdc1b5;
-    border: 6px solid #bbada0;
+    border: 6px solid white;
 
     margin: 0 auto;
     display: flex;
@@ -35,66 +38,201 @@ hr {
 /* colored tiles */
 
 .x2 {
-    background-color: #eee4da;
-    color: #727371;
+    background-color: #57c2e3;
+    color: #070706;
 }
 
 .x4 {
-    background-color: #ece0ca;
-    color: #727371;
+    background-color: #e22bbb;
+    color: white;
 }
 
 .x8 {
-    background-color: #f4b17a;
+    background-color: #df6704;
     color: white;
 }
 
 .x16{
-    background-color: #f59575;
-    color: white;
+    background-color: #dde40a;
+    color: rgb(9, 4, 4);
 }
 
 .x32{
-    background-color: #f57c5f;
+    background-color: #2c41cd;
     color: white;
 }
 
 .x64{
-    background-color: #f65d3b;
+    background-color: #09de1b;
     color: white;
 }
 
 .x128{
-    background-color: #edce71;
+    background-color: #f30a06;
     color: white;
 }
 
 .x256{
-    background-color: #edcc63;
+    background-color: #09daed;
     color: white;
 }
 
 .x512{
-    background-color: #edc651;
+    background-color: #279a44;
     color: white;
 }
 
 .x1024{
-    background-color: #eec744;
+    background-color: #e347d1;
     color: white;
 }
 
 .x2048{
-    background-color: #ecc230;
+    background-color: #54d4ae;
     color: white;
 }
 
 .x4096 {
-    background-color: #fe3d3d;
+    background-color: #9585f143;
     color: white;
 }
 
 .x8192 {
-    background-color: #ff2020;
+    background-color: #b128284a;
     color: white;
+}
+
+#home {
+    margin: 0;
+    padding: 0;
+    background-image: url('./home.jpg'); /* Replace 'background-image.jpg' with the path to your image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* This ensures that the background image doesn't scroll with the page */
+    height: 100vh; /* Ensure full viewport height */
+    position: relative; /* Positioning context for absolute positioning */
+    font-family: Arial, sans-serif;
+  }
+  .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .button-container {
+    position: absolute;
+    bottom: 20px; /* Adjust as needed */
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%);
+    width: auto;
+}
+
+  /* Style for the buttons */
+  /* Style for the buttons */
+  .button {
+    padding: 25px 50px;
+    font-size: 24px;
+    background-color:#4ee1da; /* Semi-transparent white background */
+    color:black;
+    border:3px solid #2813b7;
+    border-radius: 12px;
+    margin: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .button:hover {
+    background-color: #25ef12; /* Darker green color on hover */
+    border:3px solid #080205e9;
+    color:white;
+  }
+
+.game-over-card {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* Style for the game over card */
+.game-over-card {
+    position: fixed;
+    border:3px solid white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    z-index: 1000;
+    width: 500px; /* Increase width */
+    height: 400px;
+}
+
+.game-over-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./over.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    opacity: 0.8;
+    z-index: -1; /* Ensure the background is behind the text */
+}
+
+
+/* Style for the game over card heading */
+.game-over-card h2 {
+    /* padding:40px; */
+    font-size: 50px;
+    color:white;
+    margin-bottom: 10px;
+}
+
+/* Style for the game over card paragraphs */
+.game-over-card p {
+    font-size: 30px;
+    color: white;
+    margin-bottom: 5px;
+}
+
+/* Style for the play again button */
+.game-over-card button {
+    background-color: #8addec;
+    color: white;
+    padding: 10px 20px;
+    border:4px solid blue;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Hover effect for the play again button */
+.game-over-card button:hover {
+    background-color: #76f463;
+    border:2px solid green;
+}
+
+/* Style for the "Play Again" button */
+#playAgainBtn {
+    font-size: 20px; /* Adjust font size as needed */
+    padding: 20px 30px; /* Adjust padding as needed */
+    margin-top: 20px; /* Add margin top to separate it from other elements */
 }
